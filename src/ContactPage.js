@@ -17,19 +17,21 @@ const ContactPage = () => {
     e.preventDefault();
     const { name, phone, email, subject } = formData;
     const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}`;
-    const mailtoLink = `mailto:vedantuiuc@gmail.com?subject=New Contact Form Submission&body=${body}`;
+    const mailtoLink = `mailto:vedantuiuc@gmail.com?subject=Reaching out regarding tutoring...&body=${body}`;
     window.open(mailtoLink);
-    setFormData({ name: '', phone: '', email: '', subject: '' }); // Reset form fields
+    setFormData({ name: '', phone: '', email: '', subject: ''}); 
   };
 
   return (
     <div className="contact-page">
       <h2>Contact Me</h2>
+      <br></br>
       <h3>Contact me through the form below, or the following options:</h3>
       <ul>
         <li>Text- 331-999-4867 → Text works better at first, then we can set up a phone call.</li>
         <li>Email- vedantuiuc@gmail.com</li>
       </ul>
+      <br></br>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -75,6 +77,7 @@ const ContactPage = () => {
             required
           />
         </div>
+        <br></br>
         <button type="submit">Submit</button>
       </form>
     </div>

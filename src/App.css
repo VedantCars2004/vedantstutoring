@@ -1,7 +1,55 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f0ece2;
+  color: #596e79;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex-grow: 1;
+  padding-bottom: 200px;
+}
+
 .profile-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #596e79;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c7b198;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #596e79;
 }
 
 .course-card-container {
@@ -11,45 +59,66 @@
 }
 
 .course-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  width: 400px; 
+  border: 1px solid #dfd3c3;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px;
+  width: 800px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
 }
 
-.course-card.digital-sat {
-  background-color: white;
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #596e79;
+  margin-bottom: 1rem;
 }
 
-.course-card.math {
-  background-color: white;
-}
-
-.course-card.computer-science {
-  background-color: white;
+.detail-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #596e79;
+  margin-bottom: 0.5rem;
 }
 
 .button-container {
   display: flex;
   justify-content: space-between;
-  width: 400px; 
-  margin-top: 10px;
+  width: 400px;
+  margin-top: 20px;
 }
 
-.prev-btn, .next-btn {
-  background-color: #007bff;
-  color: white;
+.nav-btn {
+  background-color: #c7b198;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #596e79;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: #c7b198;
+  color: #fff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
 }
 
-.prev-btn:hover, .next-btn:hover {
-  background-color: #0056b3;
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #596e79;
 }
 
 .course-card {
@@ -58,24 +127,23 @@
 
 @keyframes slideIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-
-/* Navbar.css */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #596e79;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
 }
 
 .navbar-nav {
@@ -92,29 +160,33 @@
 .nav-link {
   color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .nav-link:hover {
-  background-color: #555;
+  background-color: #dfd3c3;
+  color: #596e79;
 }
 
+/* Footer */
 .footer {
-  background-color: #333;
+  background-color: #596e79;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 
 .footer-content {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .footer h2 {
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
@@ -126,50 +198,84 @@
 
 .contact-info p {
   margin: 0 10px;
+  font-size: 1.2rem;
 }
 
 .website-info {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
-
-.app-content {
-  flex-grow: 1;
-  padding-bottom: 200px; 
-}
-
+/* Contact Page */
 .contact-page {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #596e79;
+  margin-bottom: 1rem;
+}
+
+.contact-options {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.contact-options li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #596e79;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
+.form-group label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #596e79;
   margin-bottom: 5px;
+  display: block;
 }
 
-input {
+.form-group input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #dfd3c3;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #596e79;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #c7b198;
 }
 
 button[type='submit'] {
-  background-color: #333;
+  background-color: #c7b198;
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
 }
 
 button[type='submit']:hover {
-  background-color: #555;
+  background-color: #596e79;
 }

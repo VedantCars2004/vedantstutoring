@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
-        <li className="nav-item">
+      <li className="nav-item">
           <Link to="/" className="nav-link">
-            Home
+            VEDANT'S TUTORING
           </Link>
         </li>
         <li className="nav-item">
@@ -17,11 +17,7 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/why" className="nav-link">
-            Why Me
-          </Link>
-        </li>
+        
       </ul>
     </nav>
   );

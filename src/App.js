@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
-import WhyPage from './WhyPage';
 import ContactPage from './ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -16,7 +15,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/why" element={<WhyPage />} />
           </Routes>
         </div>
         <Footer />
