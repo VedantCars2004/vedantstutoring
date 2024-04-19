@@ -12,6 +12,7 @@ const HomePage = () => {
             title: 'Digital SAT Course',
             details: [
                 'SAT Math',
+                'SAT Writing',
                 'I myself got a 800/800 on the SAT Math when I took it.',
                 'My students have shown upto 190 points increase after 2 months of tutoring with me.'
             ],
@@ -59,7 +60,7 @@ const HomePage = () => {
     return (
         <div className='profile-container'>
             <h1>Welcome to Vedant's Tutoring</h1>
-            <p>EVERY COURSE AT $25/hr.</p>
+            <p>EVERY COURSE AT $30/hr.</p>
             <p>I encourage exploring this page, it only takes 5 minutes and can be vital to your future success.</p>
             <br></br>
             <div className="course-card-container" ref={cardRef}>
