@@ -30,6 +30,14 @@ body {
   margin: 0 auto;
 }
 
+.profile-container h1 {
+  text-align: center;
+}
+
+.profile-container h2 {
+  text-align: center;
+}
+
 .main-heading {
   font-size: 3rem;
   font-weight: 700;
@@ -69,6 +77,7 @@ body {
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in-out 0.3s forwards;
 }
 
 .card-title {
@@ -100,32 +109,60 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-btn:hover {
   background-color: #596e79;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.prev-btn,
+.nav-btn:active {
+  background-color: #475260;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.prev-btn {
+  background-color: #c7b198;
+  color: #fff;
+  padding: 1px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0.5)
+}
+
+.prev-btn:hover {
+  background-color: #596e79;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
+  transform: scale(1.05);
+}
+
 .next-btn {
   background-color: #c7b198;
   color: #fff;
+  padding: 5px 20px;
   border: none;
-  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0.5)
 }
 
-.prev-btn:hover,
 .next-btn:hover {
   background-color: #596e79;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
+  transform: scale(1.05);
+  font-size: 15px;
 }
 
-.course-card {
-  animation: slideIn 0.3s forwards;
-}
 
-@keyframes slideIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -186,8 +223,16 @@ body {
 }
 
 .footer h2 {
-  font-size: 2rem;
+  font-size: 20px;
   margin-bottom: 10px;
+}
+
+.footer p {
+  font-size : 13px;
+}
+
+.footer h3 {
+  font-size : 10px;
 }
 
 .contact-info {
@@ -198,7 +243,7 @@ body {
 
 .contact-info p {
   margin: 0 10px;
-  font-size: 1.2rem;
+  font-size: 15px;
 }
 
 .website-info {
@@ -241,6 +286,7 @@ body {
 
 .form-group {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .form-group label {
@@ -255,14 +301,33 @@ body {
   width: 100%;
   padding: 10px;
   border: 1px solid #dfd3c3;
-  border-radius: 5px;
+  border-radius: 100px;
   font-size: 1rem;
   color: #596e79;
+  transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
   outline: none;
   border-color: #c7b198;
+  animation: inputFocus 0.3s ease-in-out;
+}
+
+.form-group input:hover {
+  border-color: #937a5e;
+  border-width: 1.3px;
+}
+
+@keyframes inputFocus {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 button[type='submit'] {
@@ -273,9 +338,12 @@ button[type='submit'] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,1)
 }
 
 button[type='submit']:hover {
   background-color: #596e79;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
 }

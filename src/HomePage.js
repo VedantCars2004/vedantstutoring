@@ -85,7 +85,14 @@ const HomePage = () => {
   return (
     <div className="profile-container">
       <h1>Welcome to Vedant's Tutoring</h1>
+      <br></br>
+      <br></br>
+      <hr></hr>
+      <br></br>
+      <br></br>
       <h2>Courses</h2>
+      <br></br>
+      <br></br>
       <p>EVERY COURSE AT $30/hr.</p>
       <p>
         I encourage exploring this page, it only takes 5 minutes and can be vital to your future
@@ -97,6 +104,7 @@ const HomePage = () => {
       <div className="course-card-container" ref={cardRef}>
         <div className={`course-card ${courses[currentCourseIndex].category}`}>
           <h3>{courses[currentCourseIndex].title}</h3>
+          <br></br>
           <div className="course-details">
             {courses[currentCourseIndex].details.map((detail, index) => (
               <p key={index}>{detail}</p>
@@ -115,11 +123,16 @@ const HomePage = () => {
       <br></br>
     <br></br>
     <br></br>
+    <hr></hr>
+    <br></br>
+    <br></br>
+    <br></br>
       <h2>Why This Program</h2>
 
       <div className="course-card-container" ref={cardRef}>
         <div className={`course-card feature-card-${currentFeatureIndex}`}>
           <h3>{features[currentFeatureIndex].title}</h3>
+          <br></br>
           <p>{features[currentFeatureIndex].content}</p>
         </div>
         <div className="button-container">
