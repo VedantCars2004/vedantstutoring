@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+
 import './App.css';
 
 const WhyPage = () => {
@@ -56,7 +56,6 @@ const WhyPage = () => {
           </button>
         </div>
       </div>
-      <br></br>
     </div>
   );
 };
