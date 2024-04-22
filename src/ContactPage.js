@@ -6,7 +6,7 @@ const ContactPage = () => {
     name: '',
     phone: '',
     email: '',
-    subject: '',
+    course: '',
   });
 
   const handleChange = (e) => {
@@ -15,11 +15,11 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, phone, email, subject } = formData;
-    const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}`;
+    const { name, phone, email, course } = formData;
+    const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ASubject: ${course}`;
     const mailtoLink = `mailto:vedantuiuc@gmail.com?subject=Reaching out regarding tutoring...&body=${body}`;
     window.open(mailtoLink);
-    setFormData({ name: '', phone: '', email: '', subject: ''}); 
+    setFormData({ name: '', phone: '', email: '', course: ''}); 
   };
 
   return (
@@ -73,12 +73,12 @@ const ContactPage = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="subject">Subject:</label>
+          <label htmlFor="course">Course:</label>
           <input
             type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
+            id="course"
+            name="course"
+            value={formData.course}
             onChange={handleChange}
             required
           />
