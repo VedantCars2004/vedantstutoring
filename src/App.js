@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ParentDashboard from './ParentDashboard'; // Import the ParentDashboard component
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/parent-dashboard" element={<ParentDashboard />} /> {/* Add the new route for ParentDashboard */}
           </Routes>
         </div>
         <Footer />

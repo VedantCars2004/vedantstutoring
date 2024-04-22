@@ -1,13 +1,12 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.css'; 
+import './App.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
-      <li className="nav-item">
+        <li className="nav-item">
           <Link to="/" className="nav-link">
             VEDANT'S TUTORING
           </Link>
@@ -17,7 +16,11 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        
+        <li className="nav-item">
+          <Link to="/parent-dashboard" className="nav-link">
+            Parent Dashboard
+          </Link>
+        </li>
       </ul>
     </nav>
   );

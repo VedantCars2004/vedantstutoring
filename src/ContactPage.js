@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 
 const ContactPage = () => {
+  useEffect(() => {
+    document.title = 'Contact Vedant';
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
