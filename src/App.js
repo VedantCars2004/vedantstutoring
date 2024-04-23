@@ -5,9 +5,6 @@ import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import ParentDashboard from './ParentDashboard';
-import Login from './Login';
-import PrivateRoute from './PrivateRoute'; // Import the PrivateRoute component
 
 const App = () => {
   return (
@@ -18,15 +15,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/login" element={<Login />} />
-            <Route
-              path="/parent-dashboard"
-              element={
-                <PrivateRoute>
-                  <ParentDashboard />
-                </PrivateRoute>
-              }
-            />
           </Routes>
         </div>
         <Footer />

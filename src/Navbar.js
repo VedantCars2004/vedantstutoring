@@ -16,11 +16,6 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/parent-dashboard" className="nav-link">
-            Parent Dashboard
-          </Link>
-        </li>
       </ul>
     </nav>
   );
