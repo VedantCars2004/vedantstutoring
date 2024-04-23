@@ -1,5 +1,6 @@
+// ParentDashboard.js
 import React, { useState, useEffect } from 'react';
-import firebase from './firebase'; // Import the initialized Firebase instance
+import firebase from './firebase';
 import StudentSessionHistory from './StudentSessionHistory';
 
 const ParentDashboard = () => {
@@ -8,12 +9,16 @@ const ParentDashboard = () => {
   useEffect(() => {
     const fetchStudentHistory = async () => {
       try {
-        // Make an API call to fetch student history data
+        const user = firebase.auth().currentUser;
+        const token = await user.getIdToken();
+
+        // Make an authenticated API call to fetch student history data
         const response = await fetch('/api/student-history', {
           headers: {
-            'Authorization': `Bearer ${firebase.auth().currentUser.getIdToken()}` // Pass the authenticated user's token
-          }
+            'Authorization': `Bearer ${token}`,
+          },
         });
+
         const data = await response.json();
         setStudentHistory(data);
       } catch (error) {

@@ -1,11 +1,13 @@
+// App.js
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import ParentDashboard from './ParentDashboard'; // Import the ParentDashboard component
+import ParentDashboard from './ParentDashboard';
+import Login from './Login';
+import PrivateRoute from './PrivateRoute'; // Import the PrivateRoute component
 
 const App = () => {
   return (
@@ -16,7 +18,15 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/parent-dashboard" element={<ParentDashboard />} /> {/* Add the new route for ParentDashboard */}
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/parent-dashboard"
+              element={
+                <PrivateRoute>
+                  <ParentDashboard />
+                </PrivateRoute>
+              }
+            />
           </Routes>
         </div>
         <Footer />
