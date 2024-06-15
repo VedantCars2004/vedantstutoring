@@ -92,13 +92,6 @@ const HomePage = () => {
       <br></br>
       <h2>Courses</h2>
       <br></br>
-      <br></br>
-      <p>EVERY COURSE AT $30/hr.</p>
-      <p>
-        I encourage exploring this page, it only takes 5 minutes and can be vital to your future
-        success.
-      </p>
-      <br></br>
 
       {/* Course Cards */}
       <div className="course-card-container" ref={cardRef}>
@@ -121,9 +114,6 @@ const HomePage = () => {
         </div>
       </div>
       <br></br>
-    <br></br>
-    <br></br>
-    <hr></hr>
     <br></br>
     <br></br>
     <br></br>

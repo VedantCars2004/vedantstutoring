@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import SignInPage from './SignIn';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/sign-in" element={<SignInPage />} />
           </Routes>
         </div>
         <Footer />

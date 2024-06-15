@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import './App.css';
+import './Contact.css';
 
 const ContactPage = () => {
   useEffect(() => {
@@ -30,18 +30,11 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       <h2>Contact Me</h2>
-      <br></br>
+     
       <hr></hr>
-      <br></br>
-      <br></br>
-      <h3>Contact me through the form below, or the following options:</h3>
-      <br></br>
-      <ul>
-        <li>Text- 331-999-4867 → Text works better at first, then we can set up a phone call.</li>
-        <br></br>
-        <li>Email- vedantuiuc@gmail.com</li>
-      </ul>
-      <br></br>
+   
+     
+      <h4>Contact me through the form below, or leave a message at 331-999-4867 or vedantuiuc@gmail.com:</h4>
       <br></br>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -88,7 +81,7 @@ const ContactPage = () => {
             required
           />
         </div>
-        <br></br>
+      
         <br></br>
         <button type="submit">Submit</button>
       </form>
