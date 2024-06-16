@@ -29,14 +29,14 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
-      <h2>Contact Me</h2>
+      <h1 className="section-title">Contact</h1>
      
       <hr></hr>
    
      
-      <h4>Contact me through the form below, or leave a message at 331-999-4867 or vedantuiuc@gmail.com:</h4>
+      <p>Alternatively leave a message at 331-999-4867 or vedantuiuc@gmail.com</p>
       <br></br>
-      <form onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input

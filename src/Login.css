@@ -1,19 +1,19 @@
-/* Sign In Page */
-.sign-in-page {
+/* Login.css */
+.login-page {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
   }
   
-  .sign-in-title {
+  .section-title {
     font-size: 1.4rem;
     font-weight: 500;
     color: #333;
-    margin-bottom: 1rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
   
-  .sign-in-form {
+  .login-form {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -74,5 +74,13 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: background-color 0.
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,1);
   }
+  
+  button[type='submit']:hover {
+    background-color: #596e79;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
+  }
+  

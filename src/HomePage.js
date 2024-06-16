@@ -13,7 +13,7 @@ const HomePage = () => {
         'SAT Math',
         'SAT Writing',
         'I myself got a 800/800 on the SAT Math when I took it.',
-        'Students have shown upto 190 points increase after 2 months of private tutoring with me.',
+        'My students have shown upto 190 points increase after 2 months of tutoring with me.',
       ],
       category: 'digital-sat',
     },
@@ -85,11 +85,14 @@ const HomePage = () => {
   return (
     <div className="profile-container">
       <h1>Welcome to Vedant's Tutoring</h1>
-     
+      <br></br>
+      <br></br>
       <hr></hr>
-     
+      <br></br>
+      <br></br>
       <h2>Courses</h2>
-     
+      <br></br>
+
       {/* Course Cards */}
       <div className="course-card-container" ref={cardRef}>
         <div className={`course-card ${courses[currentCourseIndex].category}`}>
@@ -111,7 +114,8 @@ const HomePage = () => {
         </div>
       </div>
       <br></br>
-   
+    <br></br>
+    <br></br>
     <br></br>
       <h2>Why This Program</h2>
 
