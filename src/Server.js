@@ -8,7 +8,8 @@ app.use(bodyParser.json());
 
 // Dummy data for example
 const users = [
-  { email: 'user@example.com', password: '$2b$10$EixZ.DmrRasB6eFiB/cVoOmSoIvG09lym7kg.mEk4E4MWdb2aB5ga' } // password is 'password'
+  { email: 'user@example.com', password: '$2b$10$EixZ.DmrRasB6eFiB/cVoOmSoIvG09lym7kg.mEk4E4MWdb2aB5ga' }, // password is 'password'
+  { email: 'vedantuiuc@vt.com', password: 'password' } 
 ];
 
 // Login endpoint

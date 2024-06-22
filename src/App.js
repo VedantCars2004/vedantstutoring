@@ -4,8 +4,9 @@ import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import RegisterPage from './Register'; // New import for Register page
-import LoginPage from './Login'; // New import for Login page
+import RegisterPage from './Register';
+import LoginPage from './Login';
+import StudentProgressPage from './StudentProgressPage'; // Import the new component
 
 const App = () => {
   const isAuthenticated = () => {
@@ -19,12 +20,19 @@ const App = () => {
         <Navbar />
         <div className="app-content">
           <Routes>
-            <Route path="/" element={
-              isAuthenticated() ? <HomePage /> : <Navigate to="/login" />
-            } />
+            {/* Public routes accessible to all users */}
+            <Route path="/" element={isAuthenticated() ? <HomePage /> : <Navigate to="/login" />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+
+            {/* Protected route accessible only to authenticated users */}
+            <Route
+              path="/student-progress"
+              element={isAuthenticated() ? <StudentProgressPage /> : <Navigate to="/login" />}
+            />
+
+            {/* Route for Login page */}
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </div>
         <Footer />

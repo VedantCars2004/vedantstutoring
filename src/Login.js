@@ -11,9 +11,9 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/auth/login', { email, password });
+        const response = await axios.post('http://localhost:3000/login', { email, password });
       localStorage.setItem('token', response.data.token);
-      navigate('/');
+      navigate('/student-progress'); // Redirect to student progress page on successful login
     } catch (error) {
       console.error('Login failed', error);
     }
@@ -21,8 +21,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-page">
-      <h2 className="section-title">Sign In</h2>
-      <hr></hr>
+      <h2 className="section-title">Login</h2>
       <form className="login-form" onSubmit={handleLogin}>
         <div className="form-group">
           <label>Email:</label>

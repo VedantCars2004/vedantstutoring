@@ -20,8 +20,7 @@ const RegisterPage = () => {
 
   return (
     <div className="register-page">
-      <h1 className="section-title">Register</h1>
-      <hr></hr>
+      <h2 className="section-title">Register</h2>
       <form className="register-form" onSubmit={handleRegister}>
         <div className="form-group">
           <label>Email:</label>
