@@ -114,7 +114,6 @@ const HomePage = () => {
       <hr />
     
       <h2>Why This Program</h2>
-
       <div className="feature-card-container" ref={cardRef}>
         <div className={`feature-card feature-card-${currentFeatureIndex}`}>
           <h3>{features[currentFeatureIndex].title}</h3>

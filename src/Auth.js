@@ -5,12 +5,6 @@ const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
 
-  const users = [
-    { username: 'parent1', password: 'password1', studentInfo: 'Student 1 Info' },
-    { username: 'parent2', password: 'password2', studentInfo: 'Student 2 Info' },
-    // Add more users as needed
-  ];
-
   const handleLogin = (user) => {
     setCurrentUser(user);
     setIsAuthenticated(true);
@@ -21,7 +15,11 @@ const App = () => {
       {isAuthenticated ? (
         <div>
           <h1>Welcome {currentUser.username}</h1>
-          <p>{currentUser.studentInfo}</p>
+          <p>Meetings this week: {currentUser.meetings}</p>
+          <p>Meeting Times: {currentUser.meetingTimes.join(", ")}</p>
+          <p>Skills: {currentUser.skills.join(", ")}</p>
+          <p>Payment Due: ${currentUser.payment}</p>
+          <p>Comments: {currentUser.comments}</p>
         </div>
       ) : (
         <Login onLogin={handleLogin} users={users} />

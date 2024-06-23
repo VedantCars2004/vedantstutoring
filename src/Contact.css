@@ -3,10 +3,10 @@
   max-width: 511.5px;
   margin: 0 auto;
   padding: 40px;
-  background: #f0e9df; /* Light, neutral color */
+  background: #f0e9df; 
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center-align content */
+  text-align: center; 
 }
 
 .section-title {
