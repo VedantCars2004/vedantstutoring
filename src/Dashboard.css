@@ -1,5 +1,5 @@
-/* LoginPage.css */
-.login-page {
+/* DashboardPage.css */
+.dashboard-page {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
@@ -23,18 +23,18 @@
     margin-bottom: 2rem;
   }
   
-  .login-form {
+  .dashboard-content {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .form-group {
+  .info-group {
     margin-bottom: 20px;
   }
   
-  .form-group label {
+  .info-group label {
     font-size: 1.2rem;
     font-weight: 500;
     color: #596e79;
@@ -42,27 +42,16 @@
     display: block;
   }
   
-  .form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dfd3c3;
-    border-radius: 8px;
+  .info-group p {
     font-size: 1rem;
     color: #596e79;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0;
+    text-align: left;
   }
   
-  .form-group input:focus {
-    outline: none;
-    border-color: #937a5e;
-    box-shadow: 0 0 8px rgba(199, 177, 152, 0.4);
-  }
+  /* You can add more specific styles for dashboard elements here */
   
-  .form-group input:hover {
-    border-color: #937a5e;
-  }
-  
-  button[type='submit'] {
+  button {
     background-color: #c7b198;
     color: #fff;
     padding: 12px 20px;
@@ -73,7 +62,7 @@
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  button[type='submit']:hover {
+  button:hover {
     background-color: #596e79;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);

@@ -1,6 +1,7 @@
 // LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -17,9 +18,10 @@ const LoginPage = ({ onLogin }) => {
 
   return (
     <div className="login-page">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <h2 className="section-title">Login</h2>
+      <p>Please enter your credentials to access your account.</p>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -29,7 +31,7 @@ const LoginPage = ({ onLogin }) => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"

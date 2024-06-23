@@ -1,0 +1,76 @@
+/* Navbar.css */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  .navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-link, .logout-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit; /* Ensure the button uses the same font as other text */
+  }
+  
+  .nav-link:hover, .logout-button:hover {
+    color: #c7b198;
+  }
+  
+  /* Remove default focus styles */
+  .nav-link:focus, .logout-button:focus {
+    outline: none;
+  }
+  
+  /* Remove blue highlight on mobile tap */
+  .nav-link, .logout-button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      margin-top: 1rem;
+      flex-direction: column;
+    }
+  
+    .navbar-links li {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
