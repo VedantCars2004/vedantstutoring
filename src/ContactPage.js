@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Contact.css';
 
 const ContactPage = () => {
@@ -30,13 +29,9 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       <h1 className="section-title">Contact</h1>
-     
       <hr></hr>
-   
-     
-      <p>Alternatively leave a message at 331-999-4867 or vedantuiuc@gmail.com</p>
-      <br></br>
-      <form className="login-form" onSubmit={handleSubmit}>
+      <p>Alternatively, leave a message at 331-999-4867 or vedantuiuc@gmail.com</p>
+      <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
@@ -81,8 +76,6 @@ const ContactPage = () => {
             required
           />
         </div>
-      
-        <br></br>
         <button type="submit">Submit</button>
       </form>
     </div>

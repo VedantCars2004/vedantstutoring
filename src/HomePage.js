@@ -91,7 +91,7 @@ const HomePage = () => {
       <br></br>
       <br></br>
       <h2>Courses</h2>
-      <br></br>
+
 
       {/* Course Cards */}
       <div className="course-card-container" ref={cardRef}>
@@ -103,7 +103,9 @@ const HomePage = () => {
               <p key={index}>{detail}</p>
             ))}
           </div>
+          
         </div>
+        
         <div className="button-container">
           <button className="prev-btn" onClick={prevCourse}>
             &#8592;
@@ -115,6 +117,7 @@ const HomePage = () => {
       </div>
       <br></br>
     <br></br>
+    <hr></hr>
     <br></br>
     <br></br>
       <h2>Why This Program</h2>

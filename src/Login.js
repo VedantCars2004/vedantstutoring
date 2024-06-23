@@ -1,40 +1,48 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import './Login.css';
 
-const LoginPage = () => {
-  const [email, setEmail] = useState('');
+const Login = ({ onLogin }) => {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const [error, setError] = useState('');
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-        const response = await axios.post('http://localhost:3000/login', { email, password });
-      localStorage.setItem('token', response.data.token);
-      navigate('/student-progress'); // Redirect to student progress page on successful login
-    } catch (error) {
-      console.error('Login failed', error);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Assuming 'users' is a prop or a static list of users for simplicity
+    const user = users.find(user => user.username === username && user.password === password);
+
+    if (user) {
+      onLogin(user);
+    } else {
+      setError('Invalid username or password');
     }
   };
 
   return (
-    <div className="login-page">
-      <h2 className="section-title">Login</h2>
-      <form className="login-form" onSubmit={handleLogin}>
-        <div className="form-group">
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+    <div>
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Username:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </div>
-        <div className="form-group">
+        <div>
           <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <button type="submit">Login</button>
       </form>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;
