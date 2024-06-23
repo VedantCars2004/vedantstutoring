@@ -17,82 +17,82 @@ const App = () => {
       username: "Vinay",
       password: "student_v",
       meetings: 2,
-      meetingTimes: ["Monday 4:00 PM", "Thursday 5:00 PM"],
-      skills: ["Math", "Science"],
-      payment: 100,
-      comments: "Great progress in math this week!"
+      meetingTimes: ["Monday 6:00 PM CST", "Wednesday 6:00 PM CST"],
+      skills: [""],
+      payment: 90,
+      comments: "Payment required before next session"
     },
     {
       username: "Paul",
       password: "student_p",
-      meetings: 1,
-      meetingTimes: ["Wednesday 3:30 PM"],
-      skills: ["English", "History"],
-      payment: 50,
-      comments: "Needs to focus more on essay writing."
+      meetings: 2,
+      meetingTimes: ["Monday 8:00 PM CST", "Thursday 8:00 PM CST"],
+      skills: [""],
+      payment: 0,
+      comments: ""
     },
     {
       username: "Stav",
       password: "student_s",
-      meetings: 3,
-      meetingTimes: ["Monday 2:00 PM", "Wednesday 4:00 PM", "Friday 3:00 PM"],
-      skills: ["Physics", "Chemistry"],
-      payment: 150,
-      comments: "Excellent work on the latest lab report."
+      meetings: 2,
+      meetingTimes: ["Tuesday 10am CST", "Thursday 10am CST"],
+      skills: [],
+      payment: 60,
+      comments: "Payment required before next session"
     },
     {
       username: "Nisank",
       password: "student_n",
       meetings: 2,
-      meetingTimes: ["Tuesday 5:00 PM", "Thursday 4:30 PM"],
-      skills: ["Computer Science", "Math"],
-      payment: 100,
-      comments: "Making good progress in programming concepts."
+      meetingTimes: ["Tuesday 8:00 PM CST", "Thursday 9:00 PM CST"],
+      skills: [""],
+      payment: 0,
+      comments: "This upcoming week, we will be focusing on math"
     },
     {
       username: "Henry",
       password: "student_h",
-      meetings: 1,
-      meetingTimes: ["Friday 4:00 PM"],
-      skills: ["Art", "Design"],
-      payment: 50,
-      comments: "Showed great creativity in the latest project."
+      meetings: 0,
+      meetingTimes: [""],
+      skills: [],
+      payment: 0,
+      comments: "Starting in July..."
     },
     {
       username: "Benjamin",
       password: "student_b",
-      meetings: 2,
-      meetingTimes: ["Monday 3:00 PM", "Thursday 3:30 PM"],
-      skills: ["Music", "Drama"],
-      payment: 100,
-      comments: "Excellent performance in the recent recital."
+      meetings: 0,
+      meetingTimes: [""],
+      skills: [""],
+      payment: 0,
+      comments: "Starting in July..."
     },
     {
       username: "Devarsh",
       password: "student_d",
-      meetings: 3,
-      meetingTimes: ["Tuesday 4:00 PM", "Wednesday 5:00 PM", "Friday 3:30 PM"],
-      skills: ["Biology", "Environmental Science"],
-      payment: 150,
-      comments: "Great enthusiasm for the ecosystem project."
+      meetings: 0,
+      meetingTimes: [""],
+      skills: [""],
+      payment: 0,
+      comments: ""
     },
     {
       username: "Ashwath",
       password: "student_a",
-      meetings: 2,
-      meetingTimes: ["Monday 5:00 PM", "Wednesday 4:30 PM"],
-      skills: ["Economics", "Statistics"],
-      payment: 100,
-      comments: "Showing improvement in data analysis skills."
+      meetings: 0,
+      meetingTimes: [],
+      skills: [""],
+      payment: 0,
+      comments: "On Vacation..."
     },
     {
       username: "Ahana",
       password: "student_a",
-      meetings: 1,
-      meetingTimes: ["Thursday 3:00 PM"],
-      skills: ["Literature", "Creative Writing"],
-      payment: 50,
-      comments: "Wrote an impressive short story this week."
+      meetings: 0,
+      meetingTimes: [""],
+      skills: [""],
+      payment: 0,
+      comments: "Starting in July..."
     },
     {
       username: "test",
@@ -115,7 +115,7 @@ const App = () => {
     } else {
       setAuthenticated(false);
       setCurrentUser(null);
-      alert('Invalid username or password.');
+      alert('Invalid username or password. Please be careful about case sensitivity.');
       return false; // Failed login
     }
   };
