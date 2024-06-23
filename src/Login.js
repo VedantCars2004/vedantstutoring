@@ -1,48 +1,48 @@
+// LoginPage.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Login = ({ onLogin }) => {
+const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Assuming 'users' is a prop or a static list of users for simplicity
-    const user = users.find(user => user.username === username && user.password === password);
-
-    if (user) {
-      onLogin(user);
-    } else {
-      setError('Invalid username or password');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const loginSuccessful = onLogin(username, password);
+    if (loginSuccessful) {
+      navigate('/dashboard');
     }
   };
 
   return (
-    <div>
+    <div className="login-page">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Username:</label>
+          <label htmlFor="username">Username:</label>
           <input
             type="text"
+            id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
+            id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </div>
         <button type="submit">Login</button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
 };
 
-export default Login;
+export default LoginPage;
