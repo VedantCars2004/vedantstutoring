@@ -12,8 +12,8 @@ const HomePage = () => {
       details: [
         'SAT Math',
         'SAT Writing',
-        'I myself got a 800/800 on the SAT Math when I took it.',
-        'My students have shown upto 190 points increase after 2 months of tutoring with me.',
+        'Scored 800/800 on the SAT Math',
+        'My students have shown upto 90 points increase after 2 months of tutoring with me.',
       ],
       category: 'digital-sat',
     },
@@ -85,55 +85,48 @@ const HomePage = () => {
   return (
     <div className="profile-container">
       <h1>Welcome to Vedant's Tutoring</h1>
-      <br></br>
-      <br></br>
-      <hr></hr>
-      <br></br>
-      <br></br>
+      
+      <hr />
+     
       <h2>Courses</h2>
-
-
-      {/* Course Cards */}
-      <div className="course-card-container" ref={cardRef}>
-        <div className={`course-card ${courses[currentCourseIndex].category}`}>
+      <div className="feature-card-container" ref={cardRef}>
+        <div className={`feature-card ${courses[currentCourseIndex].category}`}>
           <h3>{courses[currentCourseIndex].title}</h3>
-          <br></br>
+          <br />
           <div className="course-details">
             {courses[currentCourseIndex].details.map((detail, index) => (
               <p key={index}>{detail}</p>
             ))}
           </div>
-          
         </div>
-        
         <div className="button-container">
           <button className="prev-btn" onClick={prevCourse}>
-            &#8592;
+            &#8592; Prev
           </button>
           <button className="next-btn" onClick={nextCourse}>
-            &#8594;
+            Next &#8594;
           </button>
         </div>
       </div>
-      <br></br>
-    <br></br>
-    <hr></hr>
-    <br></br>
-    <br></br>
+
+      
+      <br />
+      <hr />
+    
       <h2>Why This Program</h2>
 
-      <div className="course-card-container" ref={cardRef}>
-        <div className={`course-card feature-card-${currentFeatureIndex}`}>
+      <div className="feature-card-container" ref={cardRef}>
+        <div className={`feature-card feature-card-${currentFeatureIndex}`}>
           <h3>{features[currentFeatureIndex].title}</h3>
-          <br></br>
+          <br />
           <p>{features[currentFeatureIndex].content}</p>
         </div>
         <div className="button-container">
           <button className="prev-btn" onClick={prevFeature}>
-            &#8592;
+            &#8592; Prev
           </button>
           <button className="next-btn" onClick={nextFeature}>
-            &#8594;
+            Next &#8594;
           </button>
         </div>
       </div>

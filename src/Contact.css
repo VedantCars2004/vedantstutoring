@@ -1,23 +1,22 @@
-/* Contact Page */
+/* Contact.css */
 .contact-page {
-  max-width: 800px;
+  max-width: 511.5px;
   margin: 0 auto;
   padding: 40px;
-  background: #f4f4f4; /* Changed to a light, neutral color */
+  background: #f0e9df; /* Light, neutral color */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center-align content */
 }
 
 .section-title {
   font-size: 2rem;
-  text-align: center;
   font-weight: 600;
   color: #333;
   margin-bottom: 1rem;
 }
 
 p {
-  text-align: center;
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 2rem;
@@ -28,6 +27,7 @@ p {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Left-align form content */
 }
 
 .form-group {
@@ -54,12 +54,8 @@ p {
 
 .form-group input:focus {
   outline: none;
-  border-color: #937a5e; /* Darker outline when focused */
+  border-color: #937a5e;
   box-shadow: 0 0 8px rgba(199, 177, 152, 0.4);
-}
-
-.form-group input:hover {
-  border-color: #937a5e; /* Darker outline when hovered */
 }
 
 button[type='submit'] {

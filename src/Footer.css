@@ -1,0 +1,98 @@
+/* Footer.css */
+.footer {
+  background-color: #333; /* Dark background color */
+  color: white;
+  padding: 20px 0; /* Reduced padding to decrease vertical space */
+  text-align: center; /* Center-align text */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* This will now affect only the direct children */
+  padding: 0 1rem;
+}
+
+.footer-title {
+  font-size: 1.2rem; /* Smaller font size for title */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-left: 1rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem; /* Smaller font size for links */
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #c7b198; /* Light brownish on hover */
+}
+
+/* Phone number and email */
+.contact-info {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Adjust spacing between items */
+}
+
+.contact-info p {
+  font-size: 0.9rem; /* Adjusted font size for phone number and email */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white; /* Set text color to white */
+}
+
+.contact-info p.react-icons {
+  color: white; /* Set icon color to white */
+}
+
+/* Remove default focus styles */
+.footer-link:focus {
+  outline: none;
+}
+
+/* Remove blue highlight on mobile tap */
+.footer-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+ .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .footer-links {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+ .footer-links li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive adjustments for phone number and email */
+ .contact-info p {
+    font-size: 0.8rem; /* Adjusted font size for smaller screens */
+  }
+}

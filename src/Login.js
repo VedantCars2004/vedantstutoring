@@ -1,7 +1,7 @@
 // LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import './Login.css'; // Make sure to create this CSS file
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
