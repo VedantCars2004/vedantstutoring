@@ -19,8 +19,8 @@ const App = () => {
       meetings: 2,
       meetingTimes: ["Monday 6:00 PM CST", "Wednesday 6:00 PM CST"],
       skills: [""],
-      payment: 90,
-      comments: "Payment required before next session"
+      payment: 0,
+      comments: ""
     },
     {
       username: "Paul",

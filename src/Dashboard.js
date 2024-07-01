@@ -10,7 +10,7 @@ const DashboardPage = ({ currentUser }) => {
   return (
     <div className="dashboard-page">
       <h2 className="section-title">Welcome, {currentUser.username}</h2>
-      <p>Here's your personalized dashboard.</p>
+      <p>Here's your personalized dashboard for week of 6/24.</p>
       <div className="dashboard-content">
         <div className="info-group">
           <label>Number of Meetings This Week:</label>
