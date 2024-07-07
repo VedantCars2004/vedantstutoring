@@ -10,7 +10,7 @@ const DashboardPage = ({ currentUser }) => {
   return (
     <div className="dashboard-page">
       <h2 className="section-title">Welcome, {currentUser.username}</h2>
-      <p>Here's your personalized dashboard for week of 6/24.</p>
+      <p>Here's your personalized dashboard</p>
       <div className="dashboard-content">
         <div className="info-group">
           <label>Number of Meetings This Week:</label>
@@ -25,7 +25,7 @@ const DashboardPage = ({ currentUser }) => {
           </ul>
         </div>
         <div className="info-group">
-          <label>Skills Worked On:</label>
+          <label>Skills Worked On the Past Week:</label>
           <ul>
             {currentUser.skills.map((skill, index) => (
               <li key={index}>{skill}</li>

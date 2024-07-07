@@ -16,38 +16,38 @@ const App = () => {
     {
       username: "Vinay",
       password: "student_v",
-      meetings: 2,
-      meetingTimes: ["Monday 6:00 PM CST", "Wednesday 6:00 PM CST"],
-      skills: [""],
-      payment: 0,
-      comments: ""
+      meetings: 4,
+      meetingTimes: ["Monday 10:00 AM CST", "Wednesday  8:00 PM CST", "Friday 10:00 AM CST"],
+      skills: ["SAT English Course Challenge (Need working on evidence reading questions, identifying subject modifier place.)", "SAT Math Unit 6 Quiz 2→ Unit 7 Lesson 1", "SAT Math Unit 7 Lesson 2→Unit 7 Lesson 4, Struggled a bit with unit conversions but did really well (missed no questions) on the stats questions (median, mode, range, mean)"],
+      payment: $90,
+      comments: "Payment due from last week"
     },
     {
       username: "Paul",
       password: "student_p",
       meetings: 2,
-      meetingTimes: ["Monday 8:00 PM CST", "Thursday 8:00 PM CST"],
-      skills: [""],
-      payment: 0,
-      comments: ""
+      meetingTimes: ["Monday 9:00 PM CST", "Friday 9:00 PM CST"],
+      skills: ["SAT English U4L1→U5UT"],
+      payment: $30,
+      comments: "Payment due from last week"
     },
     {
       username: "Stav",
       password: "student_s",
-      meetings: 2,
-      meetingTimes: ["Tuesday 10am CST", "Thursday 10am CST"],
-      skills: [],
+      meetings: 0,
+      meetingTimes: [""],
+      skills: ["SAT English U3L2→U4L2"],
       payment: 60,
-      comments: "Payment required before next session"
+      comments: "Payment due from last week"
     },
     {
       username: "Nisank",
       password: "student_n",
       meetings: 2,
-      meetingTimes: ["Tuesday 8:00 PM CST", "Thursday 9:00 PM CST"],
-      skills: [""],
-      payment: 0,
-      comments: "This upcoming week, we will be focusing on math"
+      meetingTimes: ["Monday 8:00 PM CST", "Tuesday 9:00 PM CST"],
+      skills: ["SAT Math U5L4→U6L2", "SAT Math U6L3→U6L4 (A little bit of slow progress here on skills such as linear inequalities)"],
+      payment: $90,
+      comments: "Payment due from last week"
     },
     {
       username: "Henry",
@@ -56,7 +56,7 @@ const App = () => {
       meetingTimes: [""],
       skills: [],
       payment: 0,
-      comments: "Starting in July..."
+      comments: "Starting soon"
     },
     {
       username: "Benjamin",
@@ -65,7 +65,7 @@ const App = () => {
       meetingTimes: [""],
       skills: [""],
       payment: 0,
-      comments: "Starting in July..."
+      comments: "Starting soon"
     },
     {
       username: "Devarsh",
@@ -88,11 +88,11 @@ const App = () => {
     {
       username: "Ahana",
       password: "student_a",
-      meetings: 0,
-      meetingTimes: [""],
-      skills: [""],
-      payment: 0,
-      comments: "Starting in July..."
+      meetings: 2,
+      meetingTimes: ["Tuesday 6pm CST", "Thursday 6pm CST"],
+      skills: ["SAT Math U10L1→U10Q2", "SAT Math U10Q2→U11L4"],
+      payment: $60,
+      comments: "Payment due from last week"
     },
     {
       username: "test",
