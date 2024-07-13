@@ -17,16 +17,16 @@ const App = () => {
       username: "Vinay",
       password: "student_v",
       meetings: 3,
-      meetingTimes: ["Monday 10:00 AM CST", "Wednesday  8:00 PM CST", "Friday 10:00 AM CST"],
-      skills: ["SAT English U2L1→Complete U2"],
-      payment: 0,
-      comments: ""
+      meetingTimes: ["Monday 11:30 AM CST", "Wednesday  11:30 PM CST", "Friday 11:30 AM CST"],
+      skills: ["SAT English U2L1→Complete U2", "SAT Math U7L2→U7L6", "SAT English U3L1→U3UT Complete"],
+      payment: 90,
+      comments: "Missing very few questions in english, noticeable improvement."
     },
     {
       username: "Paul",
       password: "student_p",
       meetings: 2,
-      meetingTimes: ["Monday 9:00 PM CST", "Friday 9:00 PM CST"],
+      meetingTimes: ["Monday 9:00 PM CST", "Sunday 9:00 PM CST"],
       skills: ["SAT Math U6Q2→U7L3"],
       payment: 0,
       comments: ""
@@ -44,28 +44,28 @@ const App = () => {
       username: "Nisank",
       password: "student_n",
       meetings: 2,
-      meetingTimes: ["Monday 8:00 PM CST", "Tuesday 9:00 PM CST"],
-      skills: ["SAT Math U6L4→U6L5"],
-      payment: 0,
-      comments: ""
+      meetingTimes: ["Monday 8:00 PM CST", "Wednesday 8:00 PM CST"],
+      skills: ["SAT Math U6L4→U6L5", "SAT Math U6L5→U6L8"],
+      payment: 60,
+      comments: "Covered very few questions on day 1, faster paced on day 2. Need to continue working on timing with math questions"
     },
     {
       username: "Henry",
       password: "student_h",
       meetings: 2,
-      meetingTimes: ["Tuesday 7pm CST, Thursday 7pm CST"],
-      skills: ["SAT Practice Test"],
+      meetingTimes: ["Monday 7pm CST, Thursday 7pm CST"],
+      skills: [""],
       payment: 0,
-      comments: ""
+      comments: "Doing practice to guage level before beginning Khan Academy practice"
     },
     {
       username: "Benjamin",
       password: "student_b",
-      meetings: 1,
-      meetingTimes: ["Thursday 7pm CST"],
-      skills: [""],
+      meetings: 2,
+      meetingTimes: ["Monday 7pm CST", "Thursday 7pm CST"],
+      skills: ["Advanced Algebra Skills U10"],
       payment: 0,
-      comments: ""
+      comments: "Needed some refreshers on some key math concepts asked on the SAT, learned quickly"
     },
     {
       username: "Devarsh",
@@ -88,11 +88,11 @@ const App = () => {
     {
       username: "Ahana",
       password: "student_a",
-      meetings: 2,
-      meetingTimes: ["Tuesday 6pm CST", "Thursday 6pm CST"],
-      skills: ["SAT Math U11Q1→U11L8"],
-      payment: 0,
-      comments: ""
+      meetings: 0,
+      meetingTimes: [],
+      skills: ["SAT Math U11Q1→U11L8", "SAT Math U11L9→U12Q1"],
+      payment: 60,
+      comments: "Very few missed questions in math, needed more help with stats/ distributions questions"
     },
     {
       username: "test",
@@ -102,6 +102,15 @@ const App = () => {
       skills: [],
       payment: 0,
       comments: "Test account for system verification."
+    },
+    {
+      username: "haven",
+      password: "student_h",
+      meetings: 2,
+      meetingTimes: ["Wednesday 7pm CST, Thursday 8pm CST"],
+      skills: [],
+      payment: 0,
+      comments: "Starting this week"
     }
   ];
 
