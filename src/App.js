@@ -7,6 +7,7 @@ import LoginPage from './Login';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import DashboardPage from './Dashboard';
+import SchedulingForm from './SchedulingForm';
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -157,6 +158,7 @@ const App = () => {
     )
   }
 />
+<Route path="/schedule" element={<SchedulingForm />} />
           </Routes>
         </div>
         <Footer />
