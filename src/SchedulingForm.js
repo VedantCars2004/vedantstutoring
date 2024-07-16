@@ -4,6 +4,11 @@ const SchedulingPage = () => {
   const [sessionType, setSessionType] = useState(null);
   const calendarRef = useRef(null);
 
+  const calendlyUrls = {
+    oneOnOne: "https://calendly.com/vedantuiuc/1-1-tutoring-session?background_color=&text_color=213239&primary_color=c7b198",
+    group: "https://calendly.com/vedantuiuc/group-tutoring-sessions?hide_gdpr_banner=1&background_color=&text_color=213239&primary_color=c7b198"
+  };
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -30,12 +35,7 @@ const SchedulingPage = () => {
         utm: {}
       });
     }
-  }, [sessionType]);
-
-  const calendlyUrls = {
-    oneOnOne: "https://calendly.com/vedantuiuc/1-1-tutoring-session?background_color=&text_color=213239&primary_color=c7b198",
-    group: "https://calendly.com/vedantuiuc/group-tutoring-sessions?hide_gdpr_banner=1&background_color=&text_color=213239&primary_color=c7b198"
-  };
+  }, [sessionType, calendlyUrls]);
 
   const handleSessionTypeChange = (type) => {
     setSessionType(type);
@@ -73,7 +73,7 @@ const SchedulingPage = () => {
       fontSize: '16px',
       cursor: 'pointer',
       backgroundColor: '#c7b198',
-      color: 'white', // Changed to white
+      color: 'white',
       border: 'none',
       borderRadius: '5px',
       transition: 'background-color 0.3s',
@@ -84,7 +84,6 @@ const SchedulingPage = () => {
     },
   };
 
-  // New hover styles
   const [hoveredButton, setHoveredButton] = useState(null);
 
   const buttonHoverStyle = {
@@ -97,9 +96,8 @@ const SchedulingPage = () => {
       <hr style={styles.hr} />
       <div style={styles.sessionTypeSelection}>
         <h2 style={styles.h2}>Select Session Type:</h2>
-        <hr style={styles.hr} />
         <div style={styles.buttonContainer}>
-          <button 
+          <button
             style={{
               ...styles.button,
               ...(hoveredButton === 'oneOnOne' ? buttonHoverStyle : {})
@@ -110,7 +108,7 @@ const SchedulingPage = () => {
           >
             1:1 Session
           </button>
-          <button 
+          <button
             style={{
               ...styles.button,
               ...(hoveredButton === 'group' ? buttonHoverStyle : {})
@@ -123,7 +121,8 @@ const SchedulingPage = () => {
           </button>
         </div>
       </div>
-      <div 
+      <hr style={styles.hr} />
+      <div
         ref={calendarRef}
         style={{ ...styles.calendarContainer, minWidth: "400px", height: "700px" }}
       />
