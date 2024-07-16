@@ -4,10 +4,7 @@ const SchedulingPage = () => {
   const [sessionType, setSessionType] = useState(null);
   const calendarRef = useRef(null);
 
-  const calendlyUrls = {
-    oneOnOne: "https://calendly.com/vedantuiuc/1-1-tutoring-session?background_color=&text_color=213239&primary_color=c7b198",
-    group: "https://calendly.com/vedantuiuc/group-tutoring-sessions?hide_gdpr_banner=1&background_color=&text_color=213239&primary_color=c7b198"
-  };
+  const calendlyUrls = {oneOnOne: "https://calendly.com/vedantuiuc/1-1-tutoring-session?background_color=&text_color=213239&primary_color=c7b198", group: "https://calendly.com/vedantuiuc/group-tutoring-sessions?hide_gdpr_banner=1&background_color=&text_color=213239&primary_color=c7b198"};
 
   useEffect(() => {
     const script = document.createElement('script');
