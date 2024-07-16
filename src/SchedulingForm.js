@@ -16,10 +16,9 @@ const SchedulingPage = () => {
       document.body.removeChild(script);
     };
   }, []);
-
+ // remove comment later
   useEffect(() => {
     if (sessionType && window.Calendly) {
-      // Clear the existing widget
       if (calendarRef.current) {
         calendarRef.current.innerHTML = '';
       }
