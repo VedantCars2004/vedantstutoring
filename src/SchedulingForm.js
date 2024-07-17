@@ -16,7 +16,7 @@ const SchedulingPage = () => {
       document.body.removeChild(script);
     };
   }, []);
- // remove comment 
+ // remove comment later
   useEffect(() => {
     if (sessionType && window.Calendly) {
       if (calendarRef.current) {
