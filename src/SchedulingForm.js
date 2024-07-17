@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 
 const SchedulingPage = () => {
   const [sessionType, setSessionType] = useState(null);
   const calendarRef = useRef(null);
 
-  const calendlyUrls = {oneOnOne: "https://calendly.com/vedantuiuc/1-1-tutoring-session?background_color=&text_color=213239&primary_color=c7b198", group: "https://calendly.com/vedantuiuc/group-tutoring-sessions?hide_gdpr_banner=1&background_color=&text_color=213239&primary_color=c7b198"};
+  const calendlyUrls = useMemo(() => ({
+    oneOnOne: "https://calendly.com/vedantuiuc/1-1-tutoring-session?background_color=&text_color=213239&primary_color=c7b198",
+    group: "https://calendly.com/vedantuiuc/group-tutoring-sessions?hide_gdpr_banner=1&background_color=&text_color=213239&primary_color=c7b198"
+  }), []);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -16,14 +19,13 @@ const SchedulingPage = () => {
       document.body.removeChild(script);
     };
   }, []);
- // remove comment later
+
   useEffect(() => {
     if (sessionType && window.Calendly) {
       if (calendarRef.current) {
         calendarRef.current.innerHTML = '';
       }
 
-      // Initialize the new widget
       window.Calendly.initInlineWidget({
         url: calendlyUrls[sessionType],
         parentElement: calendarRef.current,
