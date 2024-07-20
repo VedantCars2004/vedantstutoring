@@ -18,19 +18,19 @@ const App = () => {
       username: "Vinay",
       password: "student_v",
       meetings: 3,
-      meetingTimes: ["Monday 11:30 AM CST", "Wednesday  11:30 PM CST", "Friday 11:30 AM CST"],
-      skills: ["SAT English U2L1→Complete U2", "SAT Math U7L2→U7L6", "SAT English U3L1→U3UT Complete"],
+      meetingTimes: ["Check Calendly + Tuesday 11am CST"],
+      skills: ["SAT Math U7L6→U7L8", "SAT English U4L1→U5L1", "SAT English U11L1→ U11L7"],
       payment: 90,
-      comments: "Missing very few questions in english, noticeable improvement."
+      comments: "Struggled a little bit on percentages, good with scatterplots, talked about & explained what he missed on Practice Test and did more of those types of questions"
     },
     {
       username: "Paul",
       password: "student_p",
       meetings: 2,
-      meetingTimes: ["Monday 9:00 PM CST", "Sunday 9:00 PM CST"],
-      skills: ["SAT Math U6Q2→U7L3"],
-      payment: 0,
-      comments: ""
+      meetingTimes: ["Check calendly"],
+      skills: ["SAT English U6L1→U7UT", "SAT Math U7Q1→U7L10"],
+      payment: 90,
+      comments: "missed some questions on linear/ exponential growth so we did extra practice on that"
     },
     {
       username: "Stav",
@@ -44,29 +44,29 @@ const App = () => {
     {
       username: "Nisank",
       password: "student_n",
-      meetings: 2,
-      meetingTimes: ["Monday 8:00 PM CST", "Wednesday 8:00 PM CST"],
+      meetings: 1,
+      meetingTimes: ["Check calendly"],
       skills: ["SAT Math U6L4→U6L5", "SAT Math U6L5→U6L8"],
       payment: 60,
-      comments: "Covered very few questions on day 1, faster paced on day 2. Need to continue working on timing with math questions"
+      comments: "did pretty good on finding main idea, struggled a little bit on two passages compare and contrast"
     },
     {
       username: "Henry",
       password: "student_h",
       meetings: 2,
-      meetingTimes: ["Monday 7pm CST, Thursday 7pm CST"],
-      skills: [""],
+      meetingTimes: ["Check calendly"],
+      skills: ["SAT Math U11L1→U11L8"],
       payment: 0,
-      comments: "Doing practice to guage level before beginning Khan Academy practice"
+      comments: "worked together to solve problems and did a great job of explaining his ideas when needed"
     },
     {
       username: "Benjamin",
       password: "student_b",
       meetings: 2,
-      meetingTimes: ["Monday 7pm CST", "Thursday 7pm CST"],
-      skills: ["Advanced Algebra Skills U10"],
+      meetingTimes: ["Check calendly"],
+      skills: ["SAT Math U11L1→U11L8"],
       payment: 0,
-      comments: "Needed some refreshers on some key math concepts asked on the SAT, learned quickly"
+      comments: "worked together to solve problems and did a great job of explaining his ideas when needed"
     },
     {
       username: "Devarsh",
@@ -90,10 +90,10 @@ const App = () => {
       username: "Ahana",
       password: "student_a",
       meetings: 0,
-      meetingTimes: [],
-      skills: ["SAT Math U11Q1→U11L8", "SAT Math U11L9→U12Q1"],
+      meetingTimes: ["Check calendly"],
+      skills: [""],
       payment: 60,
-      comments: "Very few missed questions in math, needed more help with stats/ distributions questions"
+      comments: "Had no sessions this week"
     },
     {
       username: "test",
@@ -108,10 +108,10 @@ const App = () => {
       username: "haven",
       password: "student_h",
       meetings: 2,
-      meetingTimes: ["Wednesday 7pm CST, Thursday 8pm CST"],
-      skills: [],
+      meetingTimes: ["Check calendly"],
+      skills: ["SAT Math U3L1→ U3L10", "SAT Math U2L1→U2UT"],
       payment: 0,
-      comments: "Starting this week"
+      comments: "did really well on beginner algebra skills, not missing any questions; pretty good accuracy, missed a couple questions about linear/ exponential growth"
     }
   ];
 
