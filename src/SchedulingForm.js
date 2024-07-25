@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import './Schedule.css';
 
 const SchedulingPage = () => {
   const [sessionType, setSessionType] = useState(null);
@@ -39,91 +40,40 @@ const SchedulingPage = () => {
     setSessionType(type);
   };
 
-  const styles = {
-    schedulingPage: {
-      fontFamily: 'Arial, sans-serif',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '20px',
-    },
-    h1: {
-      textAlign: 'center',
-      color: '#213239',
-    },
-    hr: {
-      border: '1px solid #c7b198',
-      margin: '20px 0',
-    },
-    sessionTypeSelection: {
-      textAlign: 'center',
-    },
-    h2: {
-      color: '#213239',
-    },
-    buttonContainer: {
-      display: 'flex',
-      justifyContent: 'center',
-      gap: '20px',
-      marginTop: '20px',
-    },
-    button: {
-      padding: '10px 20px',
-      fontSize: '16px',
-      cursor: 'pointer',
-      backgroundColor: '#c7b198',
-      color: 'white',
-      border: 'none',
-      borderRadius: '5px',
-      transition: 'background-color 0.3s',
-      width: '150px',
-    },
-    calendarContainer: {
-      marginTop: '20px',
-    },
-  };
-
-  const [hoveredButton, setHoveredButton] = useState(null);
-
-  const buttonHoverStyle = {
-    backgroundColor: '#596E79',
-  };
-
   return (
-    <div style={styles.schedulingPage}>
-      <h1 style={styles.h1}>Schedule a Tutoring Session</h1>
-      <hr style={styles.hr} />
-      <div style={styles.sessionTypeSelection}>
-        <h2 style={styles.h2}>Select Session Type:</h2>
-        <div style={styles.buttonContainer}>
-          <button
-            style={{
-              ...styles.button,
-              ...(hoveredButton === 'oneOnOne' ? buttonHoverStyle : {})
-            }}
-            onClick={() => handleSessionTypeChange('oneOnOne')}
-            onMouseEnter={() => setHoveredButton('oneOnOne')}
-            onMouseLeave={() => setHoveredButton(null)}
-          >
-            1:1 Session
-          </button>
-          <button
-            style={{
-              ...styles.button,
-              ...(hoveredButton === 'group' ? buttonHoverStyle : {})
-            }}
-            onClick={() => handleSessionTypeChange('group')}
-            onMouseEnter={() => setHoveredButton('group')}
-            onMouseLeave={() => setHoveredButton(null)}
-          >
-            Group Session
-          </button>
+    <div className="scheduling-container">
+      <div className="scheduling-content">
+        <div className="scheduling-left">
+          <div className="card-section">
+            <h1>SCHEDULE</h1>
+          </div>
+          <div className="card-section">
+            <h2>Select Session Type</h2>
+            <div className="button-container">
+              <button
+                className={`prev-btn ${sessionType === 'oneOnOne' ? 'active' : ''}`}
+                onClick={() => handleSessionTypeChange('oneOnOne')}
+              >
+                1:1 Session
+              </button>
+              <button
+                className={`prev-btn ${sessionType === 'group' ? 'active' : ''}`}
+                onClick={() => handleSessionTypeChange('group')}
+              >
+                Group Session
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="scheduling-right">
+          <div className="calendar-container" ref={calendarRef} />
         </div>
       </div>
-      <hr style={styles.hr} />
-      <div
-        ref={calendarRef}
-        style={{ ...styles.calendarContainer, minWidth: "400px", height: "700px" }}
-      />
+      <br></br>
+      <br></br>
+      <br></br>
+
     </div>
   );
 };

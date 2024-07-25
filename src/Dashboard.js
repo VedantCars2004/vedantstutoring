@@ -6,52 +6,56 @@ const DashboardPage = ({ currentUser }) => {
     return <div>Loading...</div>;
   }
 
-  // Function to handle joining the meeting
   const handleJoinMeeting = () => {
-    // Replace 'YOUR_GOOGLE_MEET_LINK' with your actual Google Meet link
     window.open('https://meet.google.com/ume-fohk-tue', '_blank');
   };
 
   return (
     <div className="dashboard-page">
-      <h2 className="section-title">Welcome, {currentUser.username}</h2>
-      <p>Here's your personalized dashboard</p>
-      <div className="dashboard-content">
-        {/* Add the Join Meeting button */}
-        <div className="info-group">
+      <div className="dashboard-grid">
+        <div className="dashboard-content welcome-box">
+          <h2 className="section-title">Welcome, {currentUser.username}</h2>
           <button onClick={handleJoinMeeting} className="join-meeting-btn">
             Join Meeting
           </button>
         </div>
-        {/* Existing content */}
-        <div className="info-group">
-          <label>Number of Meetings This Week:</label>
-          <p><center>{currentUser.meetings}</center></p>
+        <div className="dashboard-content info-box">
+          <div className="info-column left-column">
+            <div className="info-group">
+              <label>Number of Meetings This Week:</label>
+              <p>{currentUser.meetings}</p>
+            </div>
+            <div className="info-group">
+              <label>Meeting Times:</label>
+              <ul>
+                {currentUser.meetingTimes.map((time, index) => (
+                  <li key={index}>{time}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="info-group">
+              <label>Skills Worked On:</label>
+              <ul>
+                {currentUser.skills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="info-column right-column">
+            <div className="info-group">
+              <label>Payment Due:</label>
+              <p>${currentUser.payment}</p>
+            </div>
+            <div className="info-group">
+              <label>Extra Comments:</label>
+              <p>{currentUser.comments}</p>
+            </div>
+          </div>
         </div>
-        <div className="info-group">
-          <label>Meeting Times:</label>
-          <ul>
-            {currentUser.meetingTimes.map((time, index) => (
-              <li key={index}>{time}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="info-group">
-          <label>Skills Worked On the Past Week:</label>
-          <ul>
-            {currentUser.skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="info-group">
-          <label>Payment Due:</label>
-          <p><center>${currentUser.payment}</center></p>
-        </div>
-        <div className="info-group">
-          <label>Extra Comments:</label>
-          <p>{currentUser.comments}</p>
-        </div>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     </div>
   );

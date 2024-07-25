@@ -15,7 +15,6 @@ const Navbar = ({ authenticated, onLogout }) => {
       <div className="navbar-content">
         <Link to="/" className="navbar-title">VEDANT'S TUTORING</Link>
         <ul className="navbar-links">
-          <li><Link to="/contact" className="nav-link">Contact</Link></li>
           <li><Link to="/schedule" className="nav-link">Schedule</Link></li> {/* New link for scheduling form */}
           {authenticated ? (
             <>
@@ -23,7 +22,7 @@ const Navbar = ({ authenticated, onLogout }) => {
               <li><button className="logout-button" onClick={handleLogout}>Logout</button></li>
             </>
           ) : (
-            <li><Link to="/login" className="nav-link">Login</Link></li>
+            <li><Link to="/login" className="logout-button">Login</Link></li>
           )}
         </ul>
       </div>

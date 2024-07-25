@@ -1,98 +1,102 @@
-/* Footer.css */
 .footer {
-  background-color: #333; /* Dark background color */
-  color: white;
-  padding: 20px 0; /* Reduced padding to decrease vertical space */
-  text-align: center; /* Center-align text */
+  background-color: white;
+  color: var(--text-color);
+  padding: 1.5rem 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
+
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* This will now affect only the direct children */
-  padding: 0 1rem;
+  align-items: center;
+  padding: 0 2rem;
 }
 
-.footer-title {
-  font-size: 1.2rem; /* Smaller font size for title */
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-.footer-links {
-  list-style-type: none;
+.footer-info {
   display: flex;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-links li {
-  margin-left: 1rem;
-}
-
-.footer-link {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem; /* Smaller font size for links */
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #c7b198; /* Light brownish on hover */
-}
-
-/* Phone number and email */
 .contact-info {
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  gap: 10px; /* Adjust spacing between items */
+  gap: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-info p {
-  font-size: 0.9rem; /* Adjusted font size for phone number and email */
+  font-size: 0.9rem;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: white; /* Set text color to white */
+  gap: 0.5rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
-.contact-info p.react-icons {
-  color: white; /* Set icon color to white */
+.contact-info p:hover {
+  color: var(--primary-color);
 }
 
-/* Remove default focus styles */
-.footer-link:focus {
-  outline: none;
+.contact-info svg {
+  color: var(--primary-color);
 }
 
-/* Remove blue highlight on mobile tap */
-.footer-link {
-  -webkit-tap-highlight-color: transparent;
+.website-info {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.footer-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-name::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.footer-name:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 @media (max-width: 768px) {
- .footer-content {
+  .footer-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
- .footer-links {
-    margin-top: 1rem;
+  .footer-info {
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
- .footer-links li {
-    margin-left: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Responsive adjustments for phone number and email */
- .contact-info p {
-    font-size: 0.8rem; /* Adjusted font size for smaller screens */
+  .footer-name {
+    margin-top: 1rem;
   }
 }

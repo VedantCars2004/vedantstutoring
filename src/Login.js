@@ -1,7 +1,6 @@
-// LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Make sure to create this CSS file
+import './Login.css';
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -17,32 +16,36 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    <div className="login-page">
-      <h2 className="section-title">Login</h2>
-      <p>Please enter your credentials to access your account.</p>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+    <div className="login-container">
+      <div className="login-form">
+        <h1>Login</h1>
+        <h2>Please enter your credentials to access your account.</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+           
+          </div>
+          <br></br>
+          <center><button type="submit" className="prev-btn">Login</button></center>
+        </form>
+      </div>
     </div>
   );
 };

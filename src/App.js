@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './HomePage';
-import ContactPage from './ContactPage';
+
 import LoginPage from './Login';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -143,7 +143,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
-            <Route path="/contact" element={<ContactPage />} />
+
             <Route
               path="/login"
               element={<LoginPage onLogin={handleLogin} />}
@@ -161,8 +161,8 @@ const App = () => {
 <Route path="/schedule" element={<SchedulingForm />} />
           </Routes>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 };

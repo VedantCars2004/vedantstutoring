@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --text-color: #2d3436;
+  --background-color: #f0f3f8;
+  --card-bg: #ffffff;
+  --heading-color: #2c3e50;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.scheduling-container {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 71vh;
+  padding: 20px 15px;
+}
+
+.scheduling-content {
+  display: flex;
+  gap: 15px;
+}
+
+.scheduling-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.scheduling-right {
+  width: 65%;
+}
+
+.card-section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.scheduling-container h2 {
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  font-weight: 750;
+  margin-bottom: 0.8rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.action-btn:hover,
+.action-btn.active {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 120%;
+  min-height: 400px;
+}
+
+@media (max-width: 668px) {
+  .scheduling-content {
+    flex-direction: column;
+  }
+
+  .scheduling-left,
+  .scheduling-right {
+    width: 100%;
+  }
+
+  .calendar-container {
+    min-height: 350px;
+  }
+}

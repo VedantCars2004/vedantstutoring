@@ -1,69 +1,119 @@
-/* DashboardPage.css */
 .dashboard-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-    background: #f0e9df;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.dashboard-content {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.join-meeting-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.join-meeting-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-column {
+  width: 48%;
+}
+
+.info-group {
+  margin-bottom: 20px;
+}
+
+.info-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--heading-color);
+  font-size: 1rem;
+}
+
+.info-group p, .info-group ul {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.info-group ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.info-group ul li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
   }
-  
+
+  .info-box {
+    flex-direction: column;
+  }
+
+  .info-column {
+    width: 100%;
+  }
+
   .section-title {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
-  
-  p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
-  }
-  
+
   .dashboard-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
   }
-  
-  .info-group {
-    margin-bottom: 20px;
+
+  .join-meeting-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
   }
-  
-  .info-group label {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #596e79;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  .info-group p {
-    font-size: 1rem;
-    color: #596e79;
-    margin-bottom: 0;
-    text-align: left;
-  }
-  
-  /* You can add more specific styles for dashboard elements here */
-  
-  button {
-    background-color: #c7b198;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #596e79;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
+}
