@@ -1,11 +1,10 @@
-/* Navbar.css */
 .navbar {
   background-color: var(--card-bg);
   color: var(--text-color);
-  padding: 1.5rem 0; /* Increased height */
+  padding: 1.5rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;  /* Add this line */
-  z-index: 1000;  /* Add this line */
+  position: relative;  
+  z-index: 1000; 
 }
 
 

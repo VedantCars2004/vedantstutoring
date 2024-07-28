@@ -18,19 +18,19 @@ const App = () => {
       username: "Vinay",
       password: "student_v",
       meetings: 3,
-      meetingTimes: ["Check Calendly + Tuesday 11am CST"],
-      skills: ["SAT Math U7L6→U7L8", "SAT English U4L1→U5L1", "SAT English U11L1→ U11L7"],
+      meetingTimes: ["Check Calendly"],
+      skills: ["SAT Math U5L1→U5L4", "Notes- SAT Math Review of Practice Test- Geometry. Did- English Inferences (medium & advanced)"],
       payment: 90,
-      comments: "Struggled a little bit on percentages, good with scatterplots, talked about & explained what he missed on Practice Test and did more of those types of questions"
+      comments: "much better accuracy on math"
     },
     {
       username: "Paul",
       password: "student_p",
       meetings: 2,
       meetingTimes: ["Check calendly"],
-      skills: ["SAT English U6L1→U7UT", "SAT Math U7Q1→U7L10"],
-      payment: 90,
-      comments: "missed some questions on linear/ exponential growth so we did extra practice on that"
+      skills: ["SAT Math U7Q3→U8LQ1", "SAT English U9L1→U10L1"],
+      payment: 60,
+      comments: "Noticeable improvement in some english skills"
     },
     {
       username: "Stav",
@@ -46,16 +46,16 @@ const App = () => {
       password: "student_n",
       meetings: 1,
       meetingTimes: ["Check calendly"],
-      skills: ["SAT Math U6L4→U6L5", "SAT Math U6L5→U6L8"],
-      payment: 60,
-      comments: "did pretty good on finding main idea, struggled a little bit on two passages compare and contrast"
+      skills: ["SAT Math U7L1→U7L4"],
+      payment: 0,
+      comments: ""
     },
     {
       username: "Henry",
       password: "student_h",
       meetings: 2,
       meetingTimes: ["Check calendly"],
-      skills: ["SAT Math U11L1→U11L8"],
+      skills: ["Did the first unit of SAT Advanced English", "SAT Math U11L8→U12L1"],
       payment: 0,
       comments: "worked together to solve problems and did a great job of explaining his ideas when needed"
     },
@@ -64,7 +64,7 @@ const App = () => {
       password: "student_b",
       meetings: 2,
       meetingTimes: ["Check calendly"],
-      skills: ["SAT Math U11L1→U11L8"],
+      skills: ["Did the first unit of SAT Advanced English", "SAT Math U11L8→U12L1"],
       payment: 0,
       comments: "worked together to solve problems and did a great job of explaining his ideas when needed"
     },
@@ -80,20 +80,20 @@ const App = () => {
     {
       username: "Ashwath",
       password: "student_a",
-      meetings: 0,
-      meetingTimes: [],
+      meetings: 1,
+      meetingTimes: ["Check calendly"],
       skills: [""],
-      payment: 0,
-      comments: "On Vacation..."
+      payment: 30,
+      comments: "Resumed this week. Thanks for scheduling sessions in advance"
     },
     {
       username: "Ahana",
       password: "student_a",
-      meetings: 0,
+      meetings: 2,
       meetingTimes: ["Check calendly"],
-      skills: [""],
-      payment: 60,
-      comments: "Had no sessions this week"
+      skills: ["Stats U1L1→U1L2", "SAT Math U12L4→U12L13"],
+      payment: 0,
+      comments: ""
     },
     {
       username: "test",
@@ -109,9 +109,9 @@ const App = () => {
       password: "student_h",
       meetings: 2,
       meetingTimes: ["Check calendly"],
-      skills: ["SAT Math U3L1→ U3L10", "SAT Math U2L1→U2UT"],
+      skills: ["SAT Math U5Q2→U6L7", "SAT Math U4L11→U5L6", "SAT Math U3Q2→U4L10"],
       payment: 0,
-      comments: "did really well on beginner algebra skills, not missing any questions; pretty good accuracy, missed a couple questions about linear/ exponential growth"
+      comments: ""
     }
   ];
 
