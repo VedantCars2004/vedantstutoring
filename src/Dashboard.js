@@ -22,10 +22,6 @@ const DashboardPage = ({ currentUser }) => {
         <div className="dashboard-content info-box">
           <div className="info-column left-column">
             <div className="info-group">
-              <label>Number of Meetings This Week:</label>
-              <p>{currentUser.meetings}</p>
-            </div>
-            <div className="info-group">
               <label>Meeting Times:</label>
               <ul>
                 {currentUser.meetingTimes.map((time, index) => (
